@@ -1,0 +1,185 @@
+/* ======= HEADER STYLING ======= */
+.header {
+    background-color: #8B0000; /* Dark red background */
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns logo left, navbar center-right, and button far right */
+    height: 80px;
+    width: 100%;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.brand-text {
+    font-family: 'Georgia', serif;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* ======= NAVIGATION MENU ======= */
+.navbar {
+    display: flex;
+    justify-content: center; /* Aligns menu to center-right */
+    flex-grow: 1;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: #f4a261;
+}
+
+/* BUTTONS (Login and Reservation) */
+.btn {
+    background-color: #ff7f00;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Added margin for spacing between buttons */
+}
+
+.btn:hover {
+    background-color: #e67600;
+}
+
+/* ======= HERO SECTION ======= */
+.hero {
+    background-image: url('images/hero-bg.jpg'); /* Ensure the correct image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #8B0000; /* TEMP FIX: Use a background color in case the image is missing */
+    color: white;
+    text-align: left;
+    padding: 120px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 600px; /* Ensures enough height */
+    width: 100%;
+    position: relative;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    max-width: 600px;
+    margin-left: 50px; /* Moves text slightly to the right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* TAGLINE */
+.tagline {
+    color: #ff7f00;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* HERO HEADING */
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+/* HERO DESCRIPTION TEXT */
+.description {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* CALL-TO-ACTION BUTTON */
+.hero .btn {
+    font-size: 18px;
+    padding: 14px 28px;
+    background-color: #ff7f00;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.hero .btn:hover {
+    background-color: #e67600;
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .btn {
+        align-self: center;
+    }
+}

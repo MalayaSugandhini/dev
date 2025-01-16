@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Bruner's</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="/images/j.jpeg" alt="J Logo" class="brand-logo">
+            <span class="brand-text">Bruner's</span>
+        </a>
+    
+        <!-- Navigation (Aligned to Top Right) -->
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="nav-item"><a href="home" class="navbar-link">Home</a></li>
+                <li class="nav-item"><a href="about" class="navbar-link">About Us</a></li>
+                <li class="nav-item"><a href="shop" class="navbar-link">Shop</a></li>
+                <li class="nav-item"><a href="blog" class="navbar-link">Blog</a></li>
+                <li class="nav-item"><a href="contact" class="navbar-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Check if user is logged in, if yes display username, if not show login button -->
+        <% if (username) { %>
+            <span class="btn" id="userName"><%= username %></span> <!-- Display user name -->
+            <a href="/logout" class="btn">Logout</a>
+        <% } else { %>
+            <a href="/login" class="btn">Login</a>
+        <% } %>
+        
+        <!-- Reservation Button -->
+        <a href="#reservation" class="btn">Reservation</a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="tagline">Eat Sleep And</p>
+            <h1>Supper Delicious <br> Burger in Town!</h1>
+            <p class="description">Food is any substance consumed to provide nutritional support for an organism.</p>
+            <a href="#book" class="btn">Book A Table</a>
+        </div>
+    </section>
+
+</body>
+</html>
